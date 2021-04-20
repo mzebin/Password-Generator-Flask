@@ -4,7 +4,7 @@ import string
 UPPERCASE = string.ascii_uppercase
 LOWERCASE = string.ascii_lowercase
 DIGITS = string.digits
-PUNCTUATION = string.punctuation.replace("-", "")
+SYMBOLS = string.punctuation.replace("-", "")
 
 
 def generator(**kwargs):
@@ -22,4 +22,22 @@ def generator(**kwargs):
 
 
 def get_characters(**kwargs):
-    pass
+    uppercase = kwargs.get("uppercase")
+    lowercase = kwargs.get("lowercase")
+    digits = kwargs.get("digits")
+    symbols = kwargs.get("symbols")
+
+    characters = ""
+    if uppercase:
+        characters += UPPERCASE
+    if lowercase:
+        characters += LOWERCASE
+    if digits:
+        characters += DIGITS
+    if symbols:
+        characters += SYMBOLS
+
+    if len(characters) == 0:
+        return UPPERCASE + LOWERCASE + DIGITS + SYMBOLS
+
+    return characters
