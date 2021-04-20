@@ -9,7 +9,7 @@
     <div>
         <form action="/generate/" method="POST">
             <div style="text-align: center;margin-top: 50px;">
-                <h4>Test Data{{ secure_password }}</h4>
+                <h4>{{ secure_password }}</h4>
                 <input type="submit" name="submit" value="Generate Password">
                 <a href="/copy/"><input type="button" name="copy" value="Copy"></a>
             </div>
