@@ -1,3 +1,4 @@
+import pyperclip
 from flask import (
     Flask,
     redirect,
@@ -69,7 +70,9 @@ def generate():
 
 @app.route("/copy/")
 def copy():
-    return "Copy"
+    secure_password = session["secure_password"]
+    pyperclip.copy(secure_password)
+    return redirect(url_for("home"))
 
 
 if __name__ == "__main__":

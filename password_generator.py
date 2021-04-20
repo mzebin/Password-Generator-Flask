@@ -13,7 +13,7 @@ def generator(**kwargs):
 
     password = ""
     for i in range(length):
-        if i % 3 == 0 and i != 0 and i + 1 != length:
+        if i % 4 == 0 and i != 0 and i + 1 != length:
             password += "-"
         else:
             password += random.choice(characters)
@@ -41,3 +41,4 @@ def get_characters(**kwargs):
         return UPPERCASE + LOWERCASE + DIGITS + SYMBOLS
 
     return characters
+
