@@ -4,5 +4,5 @@ Password Generator using python3 and flask.
 ## Requirements
 The Requirements can be installed with:
 ```
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
